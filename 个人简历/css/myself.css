@@ -1,0 +1,336 @@
+/*通用样式ʽ*/
+h1,h2,h3,h4,h5,h6,ul,ol,dl,dd{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+body{
+  font: 12px '微软雅黑';
+  width: 100%;
+  min-height:3000px;
+  background:#333439;
+}
+.lf{
+  float: left;
+}
+.rt{
+  float: right;
+}
+.clear{
+  clear:both;
+}
+/*自定义样式ʽ*/
+
+/*****************header**************************/
+#header{
+  width:100%;
+  height:50px;
+  overflow: hidden;
+  padding: 10px 0;
+  line-height: 50px;
+  position: fixed;
+  z-index: 1000;
+  transition:all linear 200ms;
+}
+.bgchange{
+  background:#222;
+}
+
+#header .header_left{
+  float: left;
+  margin-left: 30px;
+  color: #6AB36E;
+  cursor: pointer;
+}
+#header .header_ul{
+  float:right;
+  margin-right:50px;
+  font-size: 14px;
+  color: #ffffff;
+}
+@media screen and (max-width: 880px){
+  .header_ul{
+    display: none;
+  }
+}
+#header .header_ul a{
+  float: left;
+  margin-left: 10px;
+  padding:0 15px;
+  color: #fff;
+  font-size: 16px;
+  transition: all linear 300ms;
+}
+/*移动后li的背景*/
+.move{
+  background:#6AB36E;
+  border-radius: 5px;
+  color: #fff;
+}
+
+/************************nav******************************/
+#nav{
+  width:100%;
+  height:100px;
+  position: relative;
+  overflow: hidden;
+}
+#nav .bg{
+  width:100%;
+  height:100px;
+  position: absolute;
+  z-index: -1;
+  animation: backgroundchange 15000ms linear infinite;
+}
+@keyframes backgroundchange{
+  0%{
+    background:url(../img/bg-1.jpg) no-repeat;
+    background-size: cover;
+    transform-origin: center center;
+    transform:scale(1);
+  }
+  15%{
+    background:url(../img/bg-1.jpg) no-repeat;
+    background-size: cover;
+    transform-origin: center center;
+    transform:scale(1.1);
+  }
+  30%{
+    background:url(../img/bg-1.jpg) no-repeat;
+    background-size: cover;
+    transform-origin: center center;
+    transform:scale(1);
+  }
+  30.1%{
+    background:url(../img/bg-2.jpg) no-repeat;
+    background-size: cover;
+    transform-origin: center center;
+    transform:scale(1);
+  }
+  46%{
+    background:url(../img/bg-2.jpg) no-repeat;
+    background-size: cover;
+    transform-origin: center center;
+    transform:scale(1.1);
+  }
+  61%{
+    background:url(../img/bg-2.jpg) no-repeat;
+    background-size: cover;
+    transform-origin: center center;
+    transform:scale(1);
+  }
+  61.1%{
+    background:url(../img/bg-3.jpg) no-repeat;
+    background-size: cover;
+    transform-origin: center center;
+    transform:scale(1);
+  }
+  77%{
+    background:url(../img/bg-3.jpg) no-repeat;
+    background-size: cover;
+    transform-origin: center center;
+    transform:scale(1.1);
+  }
+  100%{
+    background:url(../img/bg-3.jpg) no-repeat;
+    background-size: cover;
+    transform-origin: center center;
+    transform:scale(1);
+  }
+}
+
+#nav p{
+  color:#fff;
+  font-size: 50px;
+  text-align: center;
+  margin-top:20%;
+}
+#nav h1{
+  color:#fff;
+  font-size: 50px;
+  text-align: center;
+}
+div.btn1,div.btn2{
+  float: left;
+  width:200px;
+  height:50px;
+  border-radius: 5px;
+  border:2px solid #fff;
+  color:#fff;
+  cursor: pointer;
+  text-align: center;
+  font:22px '微软雅黑';
+  line-height: 50px;
+  transition: all 500ms linear;
+}
+div.btn1:hover,div.btn2:hover{
+  background:#fff;
+  color:#000;
+}
+div.btn2{
+  margin-left:50px;
+}
+#btn{
+  width:458px;
+  height:64px;
+  margin:50px auto;
+  position: relative;
+  z-index: 100;
+}
+
+/******************************section************************/
+#section{
+  width:100%;
+  margin-top:70px;
+  color:#fff;
+  text-align: center;
+}
+/****************toTop*************************/
+#section>div.toTop{
+  width: 50px;
+  height:50px;
+  background: url("../img/toTop.png") center center;
+  border: 1px solid #ddd;
+  position: fixed;
+  right:30px;
+  bottom:30px;
+  z-index: 1000;
+  cursor: pointer;
+  transition: all linear 200ms;
+  display: none;
+}
+#section>div.toTop:hover{
+  border: 1px solid #6AB36E;
+}
+
+
+/******************about me********************/
+#section>div.about>div:first-child{
+  font-size: 35px;
+  margin-bottom: 0;
+}
+#section>div.about>b{
+  display: inline-block;
+  width:412px;
+  height: 13px;
+  margin-top:20px;
+  background: url("../img/bottom.png") no-repeat center;
+}
+#introduce{
+  width:1200px;
+  padding:20px;
+  margin:20px auto;
+  text-align: center;
+}
+div.Creative{
+  display: inline-block;
+  width:30%;
+  opacity: 0;
+}
+div.Positive{
+  display: inline-block;
+  width:30%;
+  margin:0 30px;
+  opacity: 0;
+}
+div.professional{
+  display: inline-block;
+  width:30%;
+  opacity: 0;
+}
+div.Creative>b{
+  display: inline-block;
+  width: 162px;
+  height: 186px;
+  background: url("../img/active1.png") no-repeat;
+  position: relative;
+  top:0;
+  transition: all linear 200ms;
+}
+div.Creative>b:hover{
+  top: -10px;
+}
+div.Positive>b{
+  display: inline-block;
+  width: 162px;
+  height: 186px;
+  background: url("../img/active2.png") no-repeat;
+  position: relative;
+  top:0;
+  transition: all linear 200ms;
+}
+div.Positive>b:hover{
+  top: -10px;
+}
+div.professional>b{
+  display: inline-block;
+  width: 162px;
+  height: 186px;
+  background: url("../img/active3.png") no-repeat;
+  position: relative;
+  top:0;
+  transition: all linear 200ms;
+}
+div.professional>b:hover{
+  top: -10px;
+}
+h2.title{
+  font-size:25px;
+  font-weight: bold;
+  margin-top: 20px;
+  color:#6AB36E;
+}
+p.content{
+  font-size: 20px;
+  margin: 10px auto;
+}
+
+/*************my skills****************/
+#section>div.skills{
+  margin:60px auto;
+}
+#section>div.skills>div:first-child{
+  font-size: 35px;
+  margin-bottom: 0;
+}
+#section>div.skills>b{
+  display: inline-block;
+  width:412px;
+  height: 13px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: url("../img/bottom.png") no-repeat center;
+}
+/**MY PROJECTS**/
+#section>div.project{
+  margin:50px auto;
+}
+#section>div.project>div:first-child{
+  font-size: 35px;
+  margin-bottom: 0;
+}
+#section>div.project>b{
+  display: inline-block;
+  width:412px;
+  height: 13px;
+  margin-bottom: 20px;
+  background: url("../img/bottom.png") no-repeat center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
